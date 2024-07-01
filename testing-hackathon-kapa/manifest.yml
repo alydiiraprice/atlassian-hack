@@ -1,0 +1,19 @@
+modules:
+  macro:
+    - key: testing-hackathon-kapa-hello-world-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Tester app for Ally
+      description: Hello guys!
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/876312cc-11e8-4edc-ad61-0c4338052dff
